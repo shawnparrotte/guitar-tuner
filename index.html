@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Guitar Tuner</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="tuning-fork.png"/>
+  </head>
+
+  <body>
+
+    <div id="fretboard"></div>
+
+    <div id="fret-1" class="fret"></div>
+    <div id="fret-2" class="fret"></div>
+    <div id="fret-3" class="fret"></div>
+    <div id="fret-4" class="fret"></div>
+    <div id="fret-5" class="fret"></div>
+    <div id="fret-6" class="fret"></div>
+    <div id="fret-7" class="fret"></div>
+
+    <div id="fret-marker-1" class="fret-marker"></div>
+    <div id="fret-marker-2" class="fret-marker"></div>
+
+    <div id="string-1" class="string"></div>
+    <div id="string-area-1" class="string-area"><span></span></div>
+    <div id="string-2" class="string"></div>
+    <div id="string-area-2" class="string-area"><span></span></div>
+    <div id="string-3" class="string"></div>
+    <div id="string-area-3" class="string-area"><span></span></div>
+    <div id="string-4" class="string"></div>
+    <div id="string-area-4" class="string-area"><span></span></div>
+    <div id="string-5" class="string"></div>
+    <div id="string-area-5" class="string-area"><span></span></div>
+    <div id="string-6" class="string"></div>
+    <div id="string-area-6" class="string-area"><span></span></div>
+
+    <select id="tunings">
+
+      <option value="estandard">E Standard (E A D G B E)</option>
+      <option value="ebstandard">Eb Standard (Eb Ab Db Gb Bb Eb)</option>
+      <option value="dstandard">D Standard (D G C F A D)</option>
+      <option value="dbstandard">C# Standard (C# F# B E G# C#)</option>
+      <option value="cstandard">C Standard (C F Bb Eb G C)</option>
+
+      <option value="opena">Open A (E A C# E A E)</option>
+      <option value="openc">Open C (C E G C E G)</option>
+      <option value="opend">Open D (D A D F# A D)</option>
+      <option value="opene">Open E (E B E G# B E)</option>
+      <option value="openf">Open F (C F C F A C)</option>
+      <option value="openg">Open G (D G D G B D)</option>
+
+      <option value="dropd">Drop D (D A D G B E)</option>
+      <option value="dropdb">Drop Db (Db Ab Db Gb Bb Eb)</option>
+      <option value="dropc">Drop C (C G C F A D)</option>
+      <option value="doubledropd">Double Drop D (D A D G B D)</option>
+      <option value="doubledropd"> Dadgad (D A D G A D)</option>
+
+      <option value="minorthirds">Minor Thirds (C Eb Gb A C Eb)</option>
+      <option value="majorthirds">Major Thirds (E G# C E G# C)</option>
+      <option value="fourths">Fourths (E A D G C F)</option>
+      <option value="augfourths">Augmented Fourths (C F# C F# C F#)</option>
+      <option value="fifthsc">Fifths C (C G D A E B)</option>
+      <option value="fifthsg">Fifths G (G D A E B F#)</option>
+
+    </select>
+
+    <div id="fadeboard"></div>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+
+</html>

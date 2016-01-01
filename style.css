@@ -1,0 +1,94 @@
+.string {
+  height: 400px;
+  width: 0;
+  border: 2px solid lightgray;
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  box-shadow: 0 -1px 3px #333;
+}
+
+#string-1 {left: 30px;}
+#string-2 {left: 60px;}
+#string-3 {left: 90px;}
+#string-4 {left: 120px;}
+#string-5 {left: 150px;}
+#string-6 {left: 180px;}
+
+.string-area {
+  height: 402px;
+  width: 29px;
+  display: inline-block;
+  position: absolute;
+  z-index: 200;
+}
+
+#string-area-1 {left: 17px;}
+#string-area-2 {left: 47px;}
+#string-area-3 {left: 77px;}
+#string-area-4 {left: 107px;}
+#string-area-5 {left: 137px;}
+#string-area-6 {left: 167px;}
+
+
+#fretboard {
+  height: 404px;
+  width: 170px;
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+  background-color: #D1AC49;
+  left: 22px;
+  box-shadow: 0 30px 70px #CCC;
+}
+
+.fret {
+  width: 170px;
+  display: inline-block;
+  position: absolute;
+  z-index: 50;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  left: 22px;
+  box-shadow: 0 1px 3px #444;
+}
+
+#fret-1 {top: 8px;}
+#fret-2 {top: 12px;}
+#fret-3 {top: 78px;}
+#fret-4 {top: 150px;}
+#fret-5 {top: 225px;}
+#fret-6 {top: 295px;}
+#fret-7 {top: 362px;}
+
+.fret-marker {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50px;
+  display: inline-block;
+  position: absolute;
+  z-index: 25;
+  left: 97px;
+}
+
+#fret-marker-1 {top: 179px;}
+#fret-marker-2 {top: 319px;}
+
+#tunings {
+  position: absolute;
+  left: 222px;
+  top: 460px;
+  font-size: 500px;
+  width: 250px;
+}
+
+#fadeboard {
+  width: 10000px;
+  height: 10000px;
+  background-color: white;
+  position: absolute;
+  z-index: 1000;
+  top: -100px;
+  left: -100px;
+}
