@@ -30,7 +30,7 @@ $(".string-area").mouseenter(function(){
   $(this).prev().css("border", "2px solid lightgray")
 })
 
-$(".string-area").on("click touchstart", function(){
+$(".string-area").on("click tap", function(){
   $(".sound").remove();
   if( $(this).attr('id')==="string-area-1" ){
     $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[0] +".mp3' hidden='true' autostart='true' loop='false' />");
