@@ -37,23 +37,18 @@ $(".string-area").on("click tap", function(){
   }
   if( $(this).attr('id')==="string-area-2" ){
     createjs.Sound.play("A1");
-    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[1] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-3" ){
     createjs.Sound.play("D1");
-    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[2] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-4" ){
     createjs.Sound.play("G1");
-    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[3] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-5" ){
     createjs.Sound.play("B1");
-    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[4] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-6" ){
     createjs.Sound.play("E2");
-    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[5] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
 })
 
@@ -61,7 +56,7 @@ $(".string-area").on("click tap", function(){
 $("#tunings").change(function(){
   var now = $(this).val();
   tuning.active = tuning[now];
-  
+
   createjs.Sound.registerSound("guitar-notes/"+tuning.active[0]+".mp3", "E1");
   createjs.Sound.registerSound("guitar-notes/"+tuning.active[1]+".mp3", "A1");
   createjs.Sound.registerSound("guitar-notes/"+tuning.active[2]+".mp3", "D1");
@@ -116,6 +111,13 @@ function initAudioPlayer(){
 }
 
 $(document).ready(function(){
+
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[0]+".mp3", "E1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[1]+".mp3", "A1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[2]+".mp3", "D1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[3]+".mp3", "G1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[4]+".mp3", "B1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[5]+".mp3", "E2");
 
   setFretboard();
 
