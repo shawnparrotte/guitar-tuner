@@ -33,22 +33,22 @@ $(".string-area").mouseenter(function(){
 $(".string-area").on("click tap", function(){
   $(".sound").remove();
   if( $(this).attr('id')==="string-area-1" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[0] +".mp3' hidden='true' autostart='true' loop='false' />");
+    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[0] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-2" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[1] +".mp3' hidden='true' autostart='true' loop='false' />");
+    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[1] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-3" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[2] +".mp3' hidden='true' autostart='true' loop='false' />");
+    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[2] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-4" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[3] +".mp3' hidden='true' autostart='true' loop='false' />");
+    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[3] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-5" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[4] +".mp3' hidden='true' autostart='true' loop='false' />");
+    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[4] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-6" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[5] +".mp3' hidden='true' autostart='true' loop='false' />");
+    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[5] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
 })
 
@@ -97,7 +97,15 @@ function setFretboard(){
   return
 }
 
+function initAudioPlayer(){
+  audio = new Audio();
+  audio.src = "guitar-notes/E1.mp3";
+  audio.play();
+}
+
 $(document).ready(function(){
+
+  initAudioPlayer()
 
   setFretboard();
 
