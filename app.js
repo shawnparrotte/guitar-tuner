@@ -33,21 +33,27 @@ $(".string-area").mouseenter(function(){
 $(".string-area").on("click tap", function(){
   $(".sound").remove();
   if( $(this).attr('id')==="string-area-1" ){
+    createjs.Sound.stop();
     createjs.Sound.play("E1");
   }
   if( $(this).attr('id')==="string-area-2" ){
+    createjs.Sound.stop();
     createjs.Sound.play("A1");
   }
   if( $(this).attr('id')==="string-area-3" ){
+    createjs.Sound.stop();
     createjs.Sound.play("D1");
   }
   if( $(this).attr('id')==="string-area-4" ){
+    createjs.Sound.stop();
     createjs.Sound.play("G1");
   }
   if( $(this).attr('id')==="string-area-5" ){
+    createjs.Sound.stop();
     createjs.Sound.play("B1");
   }
   if( $(this).attr('id')==="string-area-6" ){
+    createjs.Sound.stop();
     createjs.Sound.play("E2");
   }
 })
