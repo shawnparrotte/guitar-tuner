@@ -35,7 +35,7 @@ $(".string-area").on("click tap", function(){
   if( $(this).attr('id')==="string-area-1" ){
     createjs.Sound.registerSound("guitar-notes/E1.mp3", "E1");
     createjs.Sound.play("E1");
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[0] +".mp3' hidden='true' autostart='true' loop='false' >");
+    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[0] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-2" ){
     $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[1] +".mp3' hidden='true' autostart='true' loop='false' >");
