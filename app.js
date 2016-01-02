@@ -33,24 +33,27 @@ $(".string-area").mouseenter(function(){
 $(".string-area").on("click tap", function(){
   $(".sound").remove();
   if( $(this).attr('id')==="string-area-1" ){
-    createjs.Sound.registerSound("guitar-notes/E1.mp3", "E1");
     createjs.Sound.play("E1");
-    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[0] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-2" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[1] +".mp3' hidden='true' autostart='true' loop='false' >");
+    createjs.Sound.play("A1");
+    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[1] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-3" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[2] +".mp3' hidden='true' autostart='true' loop='false' >");
+    createjs.Sound.play("D1");
+    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[2] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-4" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[3] +".mp3' hidden='true' autostart='true' loop='false' >");
+    createjs.Sound.play("G1");
+    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[3] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-5" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[4] +".mp3' hidden='true' autostart='true' loop='false' >");
+    createjs.Sound.play("B1");
+    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[4] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
   if( $(this).attr('id')==="string-area-6" ){
-    $(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[5] +".mp3' hidden='true' autostart='true' loop='false' >");
+    createjs.Sound.play("E2");
+    //$(this).children().html("<embed class='sound' src='./guitar-notes/"+ tuning.active[5] +".mp3' hidden='true' autostart='true' loop='false' >");
   }
 })
 
@@ -58,6 +61,13 @@ $(".string-area").on("click tap", function(){
 $("#tunings").change(function(){
   var now = $(this).val();
   tuning.active = tuning[now];
+  
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[0]+".mp3", "E1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[1]+".mp3", "A1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[2]+".mp3", "D1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[3]+".mp3", "G1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[4]+".mp3", "B1");
+  createjs.Sound.registerSound("guitar-notes/"+tuning.active[5]+".mp3", "E2");
 });
 
 $(window).resize(function(){
